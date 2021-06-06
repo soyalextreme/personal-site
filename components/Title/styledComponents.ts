@@ -7,6 +7,7 @@ const TitleContainer = styled.div`
   h3,
   h5 {
     font-family: "Oswald", sans-serif;
+    text-align: center;
   }
 
   h1 {
@@ -16,7 +17,7 @@ const TitleContainer = styled.div`
 
   h3 {
     font-size: 3rem;
-    color: ${ColorsDark.blueLight};
+    color: ${ColorsDark.blue};
   }
 `;
 

@@ -28,6 +28,12 @@ function MyApp({ Component, pageProps }) {
           href="https://fonts.googleapis.com/css2?family=Oswald&family=Quattrocento:wght@400;700&display=swap"
           rel="stylesheet"
         ></link>
+        {/* Playfair and Fauna One */}
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Fauna+One&family=Oswald&family=Playfair+Display:wght@400;600;900&display=swap"
+          rel="stylesheet"
+        ></link>
       </Head>
       <Component {...pageProps} />
     </>

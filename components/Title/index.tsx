@@ -1,10 +1,10 @@
 import React from "react";
+import { TFontSize } from "../../types/font";
 import TitleContainer from "./styledComponents";
 
-export type TSize = "big" | "medium" | "small";
 
 export interface TitleProps {
-  size: TSize;
+  size: TFontSize;
   text: string;
 }
 
