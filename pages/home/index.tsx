@@ -3,7 +3,7 @@ import * as React from "react";
 //* styled components
 import { Body } from "../../styles/global";
 const BodyPage = Body("#232323");
-import { Home__Main } from "./styledComponents";
+import { Home__Main } from "../../styles/pages/HomeStyledComponents";
 
 //* Components
 import Title from "../../components/Title";
