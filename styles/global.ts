@@ -10,7 +10,7 @@ export const Body = (color: string) => {
             width: 100%;
             height: 100%;
             padding: 2rem;
-            color: tomato;
+            color: blueviolet;
     `
     return BodyPage;
 }
