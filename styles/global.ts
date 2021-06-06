@@ -1,5 +1,4 @@
 import styled from "@emotion/styled"
-import { Colors } from "../constants/Colors"
 import { Fonts } from "../constants/Fonts"
 
 

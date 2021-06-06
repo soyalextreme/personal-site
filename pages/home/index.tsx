@@ -2,17 +2,16 @@ import * as React from "react";
 import { Colors } from "../../constants/Colors";
 
 //? styled components
-import { Body, Link } from "../../styles/index.style";
+import { Body, Link } from "../../styles/global";
 const BodyPage = Body(Colors.dark);
 
-import Styled from "./index.styles";
 
 export interface HomeProps {}
 
 const Home: React.FunctionComponent<HomeProps> = () => {
   return (
     <BodyPage>
-      <Styled.MainSection>
+      <div>
         <h1>Building the app.</h1>
         <h3>Coming soon... </h3>
         {/* <article className="content-main">
@@ -26,7 +25,7 @@ const Home: React.FunctionComponent<HomeProps> = () => {
             More about me!
           </Link>
         </article> */}
-      </Styled.MainSection>
+      </div>
     </BodyPage>
   );
 };
