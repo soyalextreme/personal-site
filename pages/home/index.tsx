@@ -9,12 +9,17 @@ import { ColorsDark } from "../../constants/Colors";
 export interface HomeProps {}
 
 const Home: React.FunctionComponent<HomeProps> = () => {
-  const { BodyPage } = useCreateBody(ColorsDark.background);
+  const { BodyPage, setColorBody } = useCreateBody(ColorsDark.background);
 
   return (
     <BodyPage>
-      <Title text="Building the app" size="big" />
-      <Title text="Coming soon..." size="medium" />
+      <section
+        onMouseEnter={() => setColorBody(ColorsDark.yellow)}
+        onMouseLeave={() => setColorBody(ColorsDark.background)}
+      >
+        <Title text="Building the app" size="big" />
+        <Title text="Coming soon..." size="medium" />
+      </section>
     </BodyPage>
   );
 };

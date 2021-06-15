@@ -4,17 +4,23 @@ import { useState } from "react";
 import styled from "@emotion/styled";
 
 const useCreateBody = (colorInit) => {
-  const [color, setColor] = useState(colorInit);
+  const [colorBody, setColorBody] = useState(colorInit);
 
   const BodyPage = styled.body`
-    background-color: ${color};
+    background-color: ${colorBody};
     width: 100vw;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 0;
   `;
 
   return {
-    color,
-    setColor,
+    colorBody,
+    setColorBody,
     BodyPage,
   };
 };

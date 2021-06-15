@@ -11,7 +11,7 @@ const TitleContainer = styled.div`
   }
 
   h1 {
-    color: ${ColorsDark.yellow};
+    color: ${ColorsDark.pink};
     font-size: 5rem;
   }
 
