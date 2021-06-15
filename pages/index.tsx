@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
+import Loading from "../components/Loading";
 
 export interface HomeProps {}
 
@@ -7,10 +8,10 @@ const Home: React.FunctionComponent<HomeProps> = () => {
   const router = useRouter();
 
   useEffect(() => {
-    router.push("/home");
+      router.push("/home");
   });
 
-  return <h1>Loading... one sec</h1>;
+  return <Loading />;
 };
 
 export default Home;

@@ -1,22 +1,20 @@
 import * as React from "react";
 
-//* styled components
-import { Body } from "../../styles/global";
-const BodyPage = Body("#232323");
-import { Home__Main } from "../../styles/pages/HomeStyledComponents";
+import useCreateBody from "../../hooks/useCreateBody";
 
 //* Components
 import Title from "../../components/Title";
+import { ColorsDark } from "../../constants/Colors";
 
 export interface HomeProps {}
 
 const Home: React.FunctionComponent<HomeProps> = () => {
+  const { BodyPage } = useCreateBody(ColorsDark.background);
+
   return (
     <BodyPage>
-      <Home__Main>
-          <Title text="Building the app" size="big" />
-          <Title text="Coming soon..." size="medium" />
-      </Home__Main>
+      <Title text="Building the app" size="big" />
+      <Title text="Coming soon..." size="medium" />
     </BodyPage>
   );
 };
