@@ -10,8 +10,9 @@ export interface custom404props {}
 
 const custom404: React.FunctionComponent<custom404props> = () => {
   const { BodyPage } = useCreateBody(ColorsDark.background);
-  const { Link } = useCreateLink(
+  const { LinkText } = useCreateLink(
     "/home",
+    false,
     "medium",
     ColorsDark.pink,
     "Lets go to home!"
@@ -22,7 +23,7 @@ const custom404: React.FunctionComponent<custom404props> = () => {
       <section>
         <Title size="big" text="404" />
         <CustomText size="big" text="We cannot find the page your looking" />
-        <Link />
+        <LinkText />
       </section>
     </BodyPage>
   );

@@ -7,10 +7,10 @@ import { useState } from "react";
 
 const useCreateLink = (
   initRef: string,
-  size: TFontSize,
-  initColor: string,
-  initText?: string,
-  Component?: null
+  component: boolean,
+  size?: TFontSize,
+  initColor?: string,
+  initText?: string
 ) => {
   const [ref, setRef] = useState(initRef);
   const [text, setText] = useState(initText);
@@ -28,31 +28,33 @@ const useCreateLink = (
     font-weight: lighter;
     text-decoration: underline;
     text-align: center;
+    cursor: pointer;
+    
+    :hover {
+    ${size === "big" && "font-size: 2.2rem;"}
+    ${size === "medium" && "font-size: 1.7rem;"}
+    ${size === "small" && "font-size: 1.5rem;"}
+    } 
   `;
 
-  const LinkComponent = () => (
+  const LinkComponent = ({ children }) => (
+    <LinkNext href={ref}>{children}</LinkNext>
+  );
+
+  const LinkText = () => (
     <LinkNext href={ref}>
-      <Component />
+      <LinkContent>{text}</LinkContent>
     </LinkNext>
   );
 
-  const Link = () => {
-    if (Component === null) {
-      return <LinkComponent />;
-    }
-
-    return (
-      <LinkNext href={ref}>
-        <LinkContent>{text}</LinkContent>
-      </LinkNext>
-    );
-  };
+  const evalLink = () => (component ? LinkComponent : LinkText);
 
   return {
     setColor,
     setRef,
     setText,
-    Link,
+    LinkText,
+    LinkComponent,
   };
 };
 
