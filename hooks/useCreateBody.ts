@@ -9,7 +9,7 @@ const useCreateBody = (colorInit) => {
   const BodyPage = styled.body`
     background-color: ${colorBody};
     width: 100vw;
-    height: 200vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
