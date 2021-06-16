@@ -5,9 +5,9 @@ import { TFontSize } from "../types/font";
 import LinkNext from "next/link";
 import { useState } from "react";
 
+
 const useCreateLink = (
   initRef: string,
-  component: boolean,
   size?: TFontSize,
   initColor?: string,
   initText?: string
@@ -29,12 +29,12 @@ const useCreateLink = (
     text-decoration: underline;
     text-align: center;
     cursor: pointer;
-    
+
     :hover {
-    ${size === "big" && "font-size: 2.2rem;"}
-    ${size === "medium" && "font-size: 1.7rem;"}
+      ${size === "big" && "font-size: 2.2rem;"}
+      ${size === "medium" && "font-size: 1.7rem;"}
     ${size === "small" && "font-size: 1.5rem;"}
-    } 
+    }
   `;
 
   const LinkComponent = ({ children }) => (
@@ -47,7 +47,9 @@ const useCreateLink = (
     </LinkNext>
   );
 
-  const evalLink = () => (component ? LinkComponent : LinkText);
+  const LinkButton = () => {
+    
+  }
 
   return {
     setColor,
